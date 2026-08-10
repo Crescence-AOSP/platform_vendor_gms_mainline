@@ -1,0 +1,591 @@
+prebuilt_apex {
+    name: "com.google.android.adbd",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.adbd.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.adbd.apex",
+        },
+    },
+    filename: "com.google.android.adbd.apex",
+    overrides: ["com.android.adbd"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.adservices",
+    apps: [
+        "SdkSandboxGoogle",
+        "AdServicesApkGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.adservices.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.adservices.apex",
+        },
+    },
+    filename: "com.google.android.adservices.apex",
+    overrides: ["com.android.adservices"],
+    exported_bootclasspath_fragments: ["com.android.adservices-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.adservices-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.appsearch",
+    apps: ["com.google.android.appsearch.apk"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.appsearch.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.appsearch.apex",
+        },
+    },
+    filename: "com.google.android.appsearch.apex",
+    overrides: ["com.android.appsearch"],
+    exported_bootclasspath_fragments: ["com.android.appsearch-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.appsearch-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.art",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.art.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.art.apex",
+        },
+    },
+    filename: "com.google.android.art.apex",
+    overrides: [
+        "libsigchain",
+        "libnativeloader",
+        "libnativehelper",
+        "com.android.art",
+        "com.android.art.debug",
+    ],
+    exported_bootclasspath_fragments: ["art-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["art-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.bt",
+    apps: ["BluetoothGoogle"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.bt.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.bt.apex",
+        },
+    },
+    filename: "com.google.android.bt.apex",
+    overrides: ["com.android.bt"],
+    exported_bootclasspath_fragments: ["com.android.bt-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.bt-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.cellbroadcast",
+    apps: [
+        "GoogleCellBroadcastApp",
+        "GoogleCellBroadcastServiceModule",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.cellbroadcast.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.cellbroadcast.apex",
+        },
+    },
+    filename: "com.google.android.cellbroadcast.apex",
+    overrides: ["com.android.cellbroadcast"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.configinfrastructure",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.configinfrastructure.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.configinfrastructure.apex",
+        },
+    },
+    filename: "com.google.android.configinfrastructure.apex",
+    overrides: ["com.android.configinfrastructure"],
+    exported_bootclasspath_fragments: ["com.android.configinfrastructure-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.configinfrastructure-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.conscrypt",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.conscrypt.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.conscrypt.apex",
+        },
+    },
+    filename: "com.google.android.conscrypt.apex",
+    overrides: ["com.android.conscrypt"],
+    exported_bootclasspath_fragments: ["com.android.conscrypt-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.crashrecovery",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.crashrecovery.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.crashrecovery.apex",
+        },
+    },
+    filename: "com.google.android.crashrecovery.apex",
+    overrides: ["com.android.crashrecovery"],
+    exported_bootclasspath_fragments: ["com.android.crashrecovery-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.crashrecovery-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.extservices",
+    apps: ["GoogleExtServices"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.extservices.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.extservices.apex",
+        },
+    },
+    filename: "com.google.android.extservices.apex",
+    overrides: ["com.android.extservices"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.healthfitness",
+    apps: [
+        "HealthConnectBackupRestoreGoogle",
+        "HealthConnectControllerGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.healthfitness.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.healthfitness.apex",
+        },
+    },
+    filename: "com.google.android.healthfitness.apex",
+    overrides: ["com.android.healthfitness"],
+    exported_bootclasspath_fragments: ["com.android.healthfitness-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.healthfitness-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.ipsec",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.ipsec.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.ipsec.apex",
+        },
+    },
+    filename: "com.google.android.ipsec.apex",
+    overrides: ["com.android.ipsec"],
+    exported_bootclasspath_fragments: ["com.android.ipsec-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.media",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.media.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.media.apex",
+        },
+    },
+    filename: "com.google.android.media.apex",
+    overrides: ["com.android.media"],
+    exported_bootclasspath_fragments: ["com.android.media-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.media-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.media.swcodec",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.media.swcodec.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.media.swcodec.apex",
+        },
+    },
+    filename: "com.google.android.media.swcodec.apex",
+    overrides: ["com.android.media.swcodec"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.mediaprovider",
+    apps: [
+        "MediaProviderGoogle",
+        "PhotopickerGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.mediaprovider.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.mediaprovider.apex",
+        },
+    },
+    filename: "com.google.android.mediaprovider.apex",
+    overrides: ["com.android.mediaprovider"],
+    exported_bootclasspath_fragments: ["com.android.mediaprovider-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.neuralnetworks",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.neuralnetworks.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.neuralnetworks.apex",
+        },
+    },
+    filename: "com.google.android.neuralnetworks.apex",
+    overrides: ["com.android.neuralnetworks"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.nfcservices",
+    apps: [
+        "NfcNciApexGoogle",
+        "NfcNciApexMigrationGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.nfcservices.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.nfcservices.apex",
+        },
+    },
+    filename: "com.google.android.nfcservices.apex",
+    overrides: ["com.android.nfcservices"],
+    exported_bootclasspath_fragments: ["com.android.nfcservices-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.ondevicepersonalization",
+    apps: [
+        "FederatedComputeGoogle",
+        "OnDevicePersonalizationGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.ondevicepersonalization.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.ondevicepersonalization.apex",
+        },
+    },
+    filename: "com.google.android.ondevicepersonalization.apex",
+    overrides: ["com.android.ondevicepersonalization"],
+    exported_bootclasspath_fragments: ["com.android.ondevicepersonalization-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.ondevicepersonalization-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.os.statsd",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.os.statsd.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.os.statsd.apex",
+        },
+    },
+    filename: "com.google.android.os.statsd.apex",
+    overrides: ["com.android.os.statsd"],
+    exported_bootclasspath_fragments: ["com.android.os.statsd-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.os.statsd-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.permission",
+    apps: [
+        "GooglePermissionController",
+        "GoogleSafetyCenterResources",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.permission.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.permission.apex",
+        },
+    },
+    filename: "com.google.android.permission.apex",
+    overrides: ["com.android.permission"],
+    exported_bootclasspath_fragments: ["com.android.permission-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.permission-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.profiling",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.profiling.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.profiling.apex",
+        },
+    },
+    filename: "com.google.android.profiling.apex",
+    overrides: ["com.android.profiling"],
+    exported_bootclasspath_fragments: ["com.android.profiling-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.profiling-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.resolv",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.resolv.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.resolv.apex",
+        },
+    },
+    filename: "com.google.android.resolv.apex",
+    overrides: ["com.android.resolv"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.rkpd",
+    apps: ["rkpdapp.google"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.rkpd.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.rkpd.apex",
+        },
+    },
+    filename: "com.google.android.rkpd.apex",
+    overrides: ["com.android.rkpd"],
+    exported_systemserverclasspath_fragments: ["com.android.rkpd-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.scheduling",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.scheduling.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.scheduling.apex",
+        },
+    },
+    filename: "com.google.android.scheduling.apex",
+    overrides: ["com.android.scheduling"],
+    exported_bootclasspath_fragments: ["com.android.scheduling-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.scheduling-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.sdkext",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.sdkext.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.sdkext.apex",
+        },
+    },
+    filename: "com.google.android.sdkext.apex",
+    overrides: ["com.android.sdkext"],
+    exported_bootclasspath_fragments: ["com.android.sdkext-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.telephonycore",
+    apps: [
+        "TelecomResourcesGoogle",
+        "TelecomUiGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.telephonycore.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.telephonycore.apex",
+        },
+    },
+    filename: "com.google.android.telephonycore.apex",
+    overrides: ["com.android.telephonycore"],
+    exported_bootclasspath_fragments: ["com.android.telephony-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.telephony-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.tethering",
+    apps: [
+        "ServiceConnectivityResourcesGoogle",
+        "TetheringGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.tethering.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.tethering.apex",
+        },
+    },
+    overrides: ["com.android.tethering"],
+    exported_bootclasspath_fragments: ["com.android.tethering-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.tethering-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.tzdata6",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.tzdata6.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.tzdata6.apex",
+        },
+    },
+    filename: "com.google.android.tzdata6.apex",
+    overrides: ["com.android.tzdata"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.uprobestats",
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.uprobestats.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.uprobestats.apex",
+        },
+    },
+    filename: "com.google.android.uprobestats.apex",
+    overrides: ["com.android.uprobestats"],
+    exported_bootclasspath_fragments: ["com.android.uprobestats-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.uprobestats-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.uwb",
+    apps: ["ServiceUwbResourcesGoogle"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.uwb.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.uwb.apex",
+        },
+    },
+    filename: "com.google.android.uwb.apex",
+    overrides: ["com.android.uwb"],
+    exported_bootclasspath_fragments: ["com.android.uwb-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.uwb-systemserverclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.virt",
+    apps: [
+        "EmptyPayloadAppGoogle",
+        "android.system.virtualmachine.res.google",
+        "VmTerminalAppGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.virt.apex",
+        },
+    },
+    filename: "com.google.android.virt.apex",
+    overrides: ["com.android.virt"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.webapp",
+    apps: ["WebAppServiceGoogle"],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.webapp.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.webapp.apex",
+        },
+    },
+    filename: "com.google.android.webapp.apex",
+    overrides: ["com.android.webapp"],
+    exported_bootclasspath_fragments: ["com.android.webapp-bootclasspath-fragment"],
+}
+
+prebuilt_apex {
+    name: "com.google.android.wifi",
+    apps: [
+        "OsuLoginGoogle",
+        "WifiDialogGoogle",
+        "ServiceWifiResourcesGoogle",
+    ],
+    owner: "google",
+    arch: {
+        arm64: {
+            src: "arm64/com.google.android.wifi.apex",
+        },
+        x86_64: {
+            src: "x86_64/com.google.android.wifi.apex",
+        },
+    },
+    filename: "com.google.android.wifi.apex",
+    overrides: ["com.android.wifi"],
+    exported_bootclasspath_fragments: ["com.android.wifi-bootclasspath-fragment"],
+    exported_systemserverclasspath_fragments: ["com.android.wifi-systemserverclasspath-fragment"],
+}
